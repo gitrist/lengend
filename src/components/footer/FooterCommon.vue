@@ -60,7 +60,7 @@ const date = new Date().getFullYear()
 					</div>
 				</div>
 				<div class="-mt-8 -ml-8 flex flex-wrap lg:ml-auto">
-					<a class="mt-8 ml-8" href="#"> Terms of Service</a><span class="mt-8 ml-8">·</span>
+					<a class="mt-8 ml-8" href="#">Terms of Service</a><span class="mt-8 ml-8">·</span>
 					<a class="mt-8 ml-8" href="#">Privacy Policy</a>
 					<span class="mt-8 ml-8">·</span><a class="mt-8 ml-8" href="#">Cookie Policy</a>
 				</div>
