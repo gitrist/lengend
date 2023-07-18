@@ -5,7 +5,7 @@ const date = new Date().getFullYear()
 <template>
 	<footer class="bg-gray-50 pt-[20px] pb-[16px] dark:bg-black lg:pt-[48px] lg:pb-[24px]">
 		<div class="mx-auto max-w-[1280px] px-[24px] sm2:px-[40px]">
-			<div class="flex flex-col border-b border-gray-line-base pb-[26px] lg:flex-row lg:pb-[56px]">
+			<div class="flex flex-col border-b pb-[26px] lg:flex-row lg:pb-[56px]">
 				<div class="mb-[30px] lg:mr-[72px] lg:mb-[0px]">
 					<div class="mb-[30px]">
 						<a class="inline-flex items-center space-x-[6px] text-gray-700 dark:text-white" aria-label="LEGENDSTORIES" href="/">
