@@ -55,16 +55,16 @@ const date = new Date().getFullYear()
 			</div>
 			<div class="flex flex-col items-start justify-center pt-[20px] text-gray-600 dark:text-gray-400 lg:flex-row lg:items-center lg:pt-[24px]">
 				<div class="mb-[8px] lg:mb-[0px]">
-					<div>
+					<div class="text-[14px] md:text-[16px]">
 						<span>Copyright © </span><a href="/">Legend Stories </a><span>{{ date }}</span>
 					</div>
 				</div>
-				<div class="mt-[8px] ml-[8px] flex flex-wrap lg:ml-auto">
-					<a class="mt-[8px] ml-[8px]" href="#">Terms of Service</a>
-					<span class="mt-[8px] ml-[8px]">·</span>
-					<a class="mt-[8px] ml-[8px]" href="#">Privacy Policy</a>
-					<span class="mt-[8px] ml-[8px]">·</span>
-					<a class="mt-[8px] ml-[8px]" href="#">Cookie Policy</a>
+				<div class="md:mt-[8px] md:ml-[8px] flex flex-wrap text-[14px] md:text-[16px] lg:ml-auto">
+					<a class="md:mt-[8px] md:ml-[8px]" href="#">Terms of Service</a>
+					<span class="md:mt-[8px] ml-[8px]">·</span>
+					<a class="md:mt-[8px] ml-[8px]" href="#">Privacy Policy</a>
+					<span class="md:mt-[8px] ml-[8px] mr-[8px] md:mr-0">·</span>
+					<a class="mt-[8px] md:ml-[8px]" href="#">Cookie Policy</a>
 				</div>
 			</div>
 		</div>

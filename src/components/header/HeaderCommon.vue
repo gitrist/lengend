@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
 	<header class="sticky dark:text-white" id="header">
-		<div class="h-[56px] dark:bg-black text-[14px] sm:h-[64px] md:h-[72px]">
+		<div class="h-[56px] dark:bg-[#131415] text-[14px] sm:h-[64px] md:h-[72px]">
 			<div class="mx-auto flex h-full max-w-[1280px] flex-1 py-0 px-[8px] md:px-[24px]">
 				<a class="inline-flex items-center space-x-[6px]" aria-label="LEGENDSTORIES" href="/">
 					<span class="font-semibold tracking-[1.29px] hidden sm:inline">LEGENDSTORIES</span>
@@ -57,7 +57,7 @@
 						</div>
 					</div>
 					<button
-						class="bg-transparent p-[8px] hover:bg-transparent md:dark:hover:bg-black md:with-hover:hover:bg-gray-200 md:with-hover:dark:bg-gray-800"
+						class="md:p-[8px] hidden md:block md:hover:bg-black md:rounded-[50%] md:bg-[#202020] overflow-hidden"
 						tabindex="0"
 						type="button"
 						aria-haspopup="true"
@@ -77,25 +77,18 @@
 							></path>
 						</svg>
 					</button>
-					<div>
-						<button
-							class="bg-transparent p-8 hover:bg-transparent md:bg-gray-container-base md:hover:bg-gray-100 md:dark:hover:bg-black md:with-hover:hover:bg-gray-200 md:with-hover:dark:bg-gray-800 e1iicaxz0 ww-2qi1fl"
-							tabindex="0"
-							type="button"
-							aria-label="menu"
+					<button class="bg-transparent p-[8px] block md:hidden" tabindex="0" type="button" aria-label="menu">
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-[24px] w-[24px] md:h-[28px] md:w-[28px]"
 						>
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 20 20"
-								fill="currentColor"
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-[24px] w-[24px] md:h-[28px] md:w-[28px]"
-							>
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M18 5.5H2v-2h16v2Zm0 5.5H2V9h16v2Zm0 5.5H2v-2h16v2Z"></path>
-							</svg>
-						</button>
-					</div>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M18 5.5H2v-2h16v2Zm0 5.5H2V9h16v2Zm0 5.5H2v-2h16v2Z"></path>
+						</svg>
+					</button>
 				</div>
 			</div>
 		</div>

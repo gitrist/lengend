@@ -1,4 +1,4 @@
 <script setup></script>
 <template>
-	<div class="text-white min-h-[640px]">Countries</div>
+	<div class="text-white">Countries</div>
 </template>
