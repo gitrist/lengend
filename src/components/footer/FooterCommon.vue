@@ -64,7 +64,7 @@ const date = new Date().getFullYear()
 					<span class="md:mt-[8px] ml-[8px]">·</span>
 					<a class="md:mt-[8px] ml-[8px]" href="#">Privacy Policy</a>
 					<span class="md:mt-[8px] ml-[8px] mr-[8px] md:mr-0">·</span>
-					<a class="mt-[8px] md:ml-[8px]" href="#">Cookie Policy</a>
+					<a class="md:mt-[8px] md:ml-[8px]" href="#">Cookie Policy</a>
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-	<header class="sticky dark:text-white" id="header">
+	<header class="sticky dark:text-white shadow-md" id="header">
 		<div class="h-[56px] dark:bg-[#131415] text-[14px] sm:h-[64px] md:h-[72px]">
 			<div class="mx-auto flex h-full max-w-[1280px] flex-1 py-0 px-[8px] md:px-[24px]">
 				<a class="inline-flex items-center space-x-[6px]" aria-label="LEGENDSTORIES" href="/">
@@ -18,7 +18,7 @@
 								viewBox="0 0 20 20"
 								fill="currentColor"
 								xmlns="http://www.w3.org/2000/svg"
-								class="ml-[2px] h-[14px] w-[14px] font-semibold rotate-180 text-gray-desc"
+								class="ml-[2px] h-[14px] w-[14px] font-semibold rotate-180"
 							>
 								<path fill-rule="evenodd" clip-rule="evenodd" d="m10 7.37 7.316 6.86 1.368-1.46L10 4.63l-8.684 8.14 1.368 1.46L10 7.37Z"></path>
 							</svg>
@@ -29,7 +29,7 @@
 					<div class="relative">
 						<div class="w-full">
 							<div
-								class="flex items-center overflow-hidden relative rounded-md hover:shadow-md transition-shadow dark:bg-[#202020] dark:h-[44px] dark:rounded-full px-[15px]"
+								class="flex items-center overflow-hidden relative hover:shadow-md transition-shadow bg-gray-100 dark:bg-[#202020] h-[44px] rounded-full px-[15px]"
 							>
 								<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="h-[17px] w-[17px] text-gray-600">
 									<path
@@ -39,7 +39,7 @@
 									></path>
 								</svg>
 								<input
-									class="transition-all ml-[5px] placeholder:bg-[#202020] bottom-0 h-[34px] dark:bg-[#202020] focus:border-none focus:pr-[25px] outline-none"
+									class="transition-all ml-[5px] bg-gray-100 dark:placeholder:bg-[#202020] bottom-0 h-[34px] dark:bg-[#202020] focus:border-none focus:pr-[25px] outline-none"
 									aria-invalid="false"
 									autocomplete="off"
 									placeholder="Search"
@@ -57,12 +57,9 @@
 						</div>
 					</div>
 					<button
-						class="md:p-[8px] hidden md:block md:hover:bg-black md:rounded-[50%] md:bg-[#202020] overflow-hidden"
+						class="md:p-[8px] hidden md:block bg-gray-100 md:hover:bg-gray-50 dark:md:hover:bg-black md:rounded-[50%] dark:md:bg-[#202020] overflow-hidden"
 						tabindex="0"
 						type="button"
-						aria-haspopup="true"
-						aria-label="profile nav"
-						data-cy="header-button-user-anonymous"
 					>
 						<svg
 							width="20"
