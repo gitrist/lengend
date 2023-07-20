@@ -1,31 +1,29 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+const visible = ref(false)
+
+const toggleVisible = () => {
+	visible.value = !visible.value
+}
+</script>
 <template>
-	<header class="sticky dark:text-white shadow-md" id="header">
+	<header class="relative dark:text-white shadow-md" id="header">
 		<div class="h-[56px] dark:bg-[#131415] text-[14px] sm:h-[64px] md:h-[72px]">
-			<div class="mx-auto flex h-full max-w-[1280px] flex-1 py-0 px-[8px] md:px-[24px]">
+			<div class="mx-auto flex h-full max-w-[1280px] flex-1 py-0 md:px-[24px]">
 				<a class="inline-flex items-center space-x-[6px]" aria-label="LEGENDSTORIES" href="/">
 					<span class="font-semibold tracking-[1.29px] hidden sm:inline">LEGENDSTORIES</span>
 				</a>
-				<div class="hidden md:flex">
-					<div class="mr-[8px] flex flex-1 items-center pt-[8px] sm:pt-0 md:ml-[13px]">
-						<a class="font-semibold flex h-full items-center px-[12px]" href="/novels">Series</a>
-						<a class="font-semibold flex h-full items-center px-[12px]" href="/manage/bookmarks">Bookmarks</a>
-						<button class="font-semibold flex h-full items-center pl-[12px]" aria-haspopup="true">
-							Resources
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 20 20"
-								fill="currentColor"
-								xmlns="http://www.w3.org/2000/svg"
-								class="ml-[2px] h-[14px] w-[14px] font-semibold rotate-180"
-							>
-								<path fill-rule="evenodd" clip-rule="evenodd" d="m10 7.37 7.316 6.86 1.368-1.46L10 4.63l-8.684 8.14 1.368 1.46L10 7.37Z"></path>
-							</svg>
-						</button>
+				<div
+					:class="`flex absolute w-full md:static md:top-auto md:w-auto transition-[top] duration-500 left-0 dark:bg-[#333435] dark:md:bg-transparent z-[1] ${
+						visible ? 'top-[56px]' : 'top-[-100%]'
+					}`"
+				>
+					<div class="mr-[8px] block md:flex flex-1 items-center pt-[8px] sm:pt-0 md:ml-[13px]">
+						<a class="font-semibold block p-3 md:flex md:h-full items-center px-[12px]" href="/novels">Series</a>
+						<a class="font-semibold block p-3 md:flex md:h-full items-center px-[12px]" href="/manage/bookmarks">Bookmarks</a>
 					</div>
 				</div>
-				<div class="ml-auto flex items-center space-x-[8px]">
+				<div class="relative z-10 dark:bg-[#131415] ml-auto flex items-center w-full justify-between md:w-auto md:justify-normal space-x-[8px]">
 					<div class="relative">
 						<div class="w-full">
 							<div
@@ -74,7 +72,7 @@
 							></path>
 						</svg>
 					</button>
-					<button class="bg-transparent p-[8px] block md:hidden" tabindex="0" type="button" aria-label="menu">
+					<button class="bg-transparent p-[8px] block md:hidden" tabindex="0" type="button" @click="toggleVisible">
 						<svg
 							width="20"
 							height="20"
