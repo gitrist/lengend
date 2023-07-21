@@ -11,7 +11,7 @@
 					}`"
 				>
 					<div class="mr-[8px] block md:flex flex-1 items-center pt-[8px] sm:pt-0 md:ml-[13px]">
-						<a class="font-semibold block p-3 md:flex md:h-full items-center px-[12px]" href="/novels">Series123</a>
+						<a class="font-semibold block p-3 md:flex md:h-full items-center px-[12px]" href="/novels">Series</a>
 						<a class="font-semibold block p-3 md:flex md:h-full items-center px-[12px]" href="/manage/bookmarks">Bookmarks</a>
 					</div>
 				</div>

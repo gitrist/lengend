@@ -1,6 +1,9 @@
 import { createRouter as _createRouter, createMemoryHistory, createWebHistory } from 'vue-router'
 
-const routes = [{ path: '/countries', component: () => import('../views/countries/CountriesSummary.vue') }]
+const routes = [
+	{ path: '/countries', component: () => import('../views/countries/CountriesSummary.vue') },
+	{ path: '/', component: () => import('../views/StoriesSearch/StoriesSearch.vue') }
+]
 
 export function createRouter () {
 	return _createRouter({
