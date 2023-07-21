@@ -1,13 +1,12 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter as _createRouter, createMemoryHistory, createWebHistory } from 'vue-router'
 
-const routes = [{ path: '/', component: () => import('@/views/countries/CountriesSummary.vue') }]
+const routes = [{ path: '/countries', component: () => import('../views/countries/CountriesSummary.vue') }]
 
-const route = createRouter({
-  history: createWebHashHistory(),
-  scrollBehavior (to, from, savedPosition) {
-    // 始终滚动到顶部
-    return { top: 0 }
-  },
-  routes
-})
-export default route
+export function createRouter () {
+	return _createRouter({
+		// use appropriate history implementation for server/client
+		// import.meta.env.SSR is injected by Vite.
+		history: import.meta.env.SSR ? createMemoryHistory('/') : createWebHistory('/'),
+		routes
+	})
+}

@@ -8,6 +8,9 @@ dependencies:
   koa:
     specifier: ^2.14.2
     version: 2.14.2
+  koa-connect:
+    specifier: ^2.1.0
+    version: 2.1.0
 
 packages:
 
@@ -156,6 +159,10 @@ packages:
 
   /koa-compose@4.1.0:
     resolution: {integrity: sha512-8ODW8TrDuMYvXRwra/Kh7/rJo9BtOfPc6qO8eAfC80CnCvSjSl0bkRM24X6/XBBEyj0v1nRUQ1LyOy3dbqOWXw==}
+    dev: false
+
+  /koa-connect@2.1.0:
+    resolution: {integrity: sha512-O9pcFafHk0oQsBevlbTBlB9co+2RUQJ4zCzu3qJPmGlGoeEZkne+7gWDkecqDPSbCtED6LmhlQladxs6NjOnMQ==}
     dev: false
 
   /koa-convert@2.0.0:

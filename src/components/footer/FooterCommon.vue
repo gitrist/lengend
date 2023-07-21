@@ -1,7 +1,3 @@
-<script setup>
-const date = new Date().getFullYear()
-</script>
-
 <template>
 	<footer class="bg-gray-50 pt-[20px] pb-[16px] dark:bg-black lg:pt-[48px] lg:pb-[24px]">
 		<div class="mx-auto max-w-[1280px] px-[24px] sm2:px-[40px]">
@@ -70,3 +66,6 @@ const date = new Date().getFullYear()
 		</div>
 	</footer>
 </template>
+<script setup>
+const date = new Date().getFullYear()
+</script>

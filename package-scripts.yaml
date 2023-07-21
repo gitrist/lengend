@@ -1,11 +1,11 @@
 scripts:
   # dev
   dev:
-    default: vite --port=4000
+    default: node server
   # build
   build:
-    default: vite build
-    preview: vite preview
+    client: vite build --outDir dist/client --ssrManifest
+    server: vite build --outDir dist/server --ssr server/entry-server.js
   # commit
   commit: git-cz
   # eslint

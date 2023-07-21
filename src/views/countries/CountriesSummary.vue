@@ -1,6 +1,3 @@
-<script setup>
-import { countries } from '../../utils'
-</script>
 <template>
 	<div class="text-white md:py-5">
 		<ul class="flex justify-around flex-wrap">
@@ -12,3 +9,7 @@ import { countries } from '../../utils'
 		</ul>
 	</div>
 </template>
+
+<script setup>
+import { countries } from '../../utils'
+</script>

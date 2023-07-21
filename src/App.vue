@@ -1,8 +1,3 @@
-<script setup>
-import FooterCommon from './components/footer/FooterCommon.vue'
-import HeaderCommon from './components/header/HeaderCommon.vue'
-</script>
-
 <template>
 	<div class="flex flex-col h-full">
 		<HeaderCommon />
@@ -14,3 +9,8 @@ import HeaderCommon from './components/header/HeaderCommon.vue'
 		<FooterCommon />
 	</div>
 </template>
+
+<script setup>
+import FooterCommon from './components/footer/FooterCommon.vue'
+import HeaderCommon from './components/header/HeaderCommon.vue'
+</script>

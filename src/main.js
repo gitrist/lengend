@@ -1,7 +1,8 @@
-import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import { createSSRApp } from 'vue'
+
 import App from './App.vue'
-// import store from "@/store"
-import router from '@/router'
+import { createRouter } from './router'
 // import "@/router/permission"
 // load
 // import { loadSvg } from "@/icons"
@@ -10,14 +11,15 @@ import router from '@/router'
 // css
 import './tailwind.css'
 
-const app = createApp(App)
-
 // loadPlugins(app)
 // loadSvg(app)
 // loadDirectives(app)
 
-app.use(router)
-
-router.isReady().then(() => {
-  app.mount('#app')
-})
+export function createApp () {
+	const app = createSSRApp(App)
+	const pinia = createPinia()
+	app.use(pinia)
+	const router = createRouter()
+	app.use(router)
+	return { app, router }
+}
