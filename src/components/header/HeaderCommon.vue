@@ -2,17 +2,17 @@
 	<header class="relative dark:text-white shadow-md" id="header">
 		<div class="h-[56px] dark:bg-[#131415] text-[14px] sm:h-[64px] md:h-[72px]">
 			<div class="mx-auto flex h-full max-w-[1280px] flex-1 py-0 md:px-[24px]">
-				<a class="inline-flex items-center space-x-[6px]" aria-label="LEGENDSTORIES" href="/">
+				<router-link class="inline-flex items-center space-x-[6px]" to="/">
 					<span class="font-semibold tracking-[1.29px] hidden sm:inline">LEGENDSTORIES</span>
-				</a>
+				</router-link>
 				<div
 					:class="`flex absolute w-full md:static md:top-auto md:w-auto transition-[top] duration-500 left-0 dark:bg-[#333435] dark:md:bg-transparent z-[1] ${
 						visible ? 'top-[56px]' : 'top-[-100%]'
 					}`"
 				>
 					<div class="mr-[8px] block md:flex flex-1 items-center pt-[8px] sm:pt-0 md:ml-[13px]">
-						<a class="font-semibold block p-3 md:flex md:h-full items-center px-[12px]" href="/novels">Series</a>
-						<a class="font-semibold block p-3 md:flex md:h-full items-center px-[12px]" href="/manage/bookmarks">Bookmarks</a>
+						<router-link class="font-semibold block p-3 md:flex md:h-full items-center px-[12px]" to="/countries">Series</router-link>
+						<router-link class="font-semibold block p-3 md:flex md:h-full items-center px-[12px]" to="/countries">Bookmarks</router-link>
 					</div>
 				</div>
 				<div class="relative z-10 dark:bg-[#131415] ml-auto flex items-center w-full justify-between md:w-auto md:justify-normal space-x-[8px]">
@@ -47,9 +47,11 @@
 						</div>
 					</div>
 					<button
+						data-popover-target="popover-Login"
+						data-popover-trigger="click"
+						type="button"
 						class="md:p-[8px] hidden md:block bg-gray-100 md:hover:bg-gray-50 dark:md:hover:bg-black md:rounded-[50%] dark:md:bg-[#202020] overflow-hidden"
 						tabindex="0"
-						type="button"
 					>
 						<svg
 							width="20"
@@ -64,6 +66,7 @@
 							></path>
 						</svg>
 					</button>
+					<LoginToolTip />
 					<button class="bg-transparent p-[8px] block md:hidden" tabindex="0" type="button" @click="toggleVisible">
 						<svg
 							width="20"
@@ -82,10 +85,19 @@
 	</header>
 </template>
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import { initFlowbite } from 'flowbite'
+
+import LoginToolTip from '../LoginToolTip/LoginToolTip.vue'
+
 const visible = ref(false)
 
 const toggleVisible = () => {
 	visible.value = !visible.value
 }
+
+// initialize components based on data attribute selectors
+onMounted(() => {
+	initFlowbite()
+})
 </script>

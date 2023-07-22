@@ -17,6 +17,12 @@ module.exports = {
   ],
   rules: {
     'no-tabs': 0,
-    indent: 0
+    indent: 0,
+    // or
+    'space-before-function-paren': ['error', {
+        anonymous: 'ignore',
+        named: 'ignore',
+        asyncArrow: 'ignore'
+    }]
   }
 }

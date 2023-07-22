@@ -1,11 +1,11 @@
 import { createRouter as _createRouter, createMemoryHistory, createWebHistory } from 'vue-router'
 
 const routes = [
-	{ path: '/countries', component: () => import('../views/countries/CountriesSummary.vue') },
+	{ path: '/countries', component: () => import('../views/Countries/CountriesSummary.vue') },
 	{ path: '/', component: () => import('../views/StoriesSearch/StoriesSearch.vue') }
 ]
 
-export function createRouter () {
+export function createRouter() {
 	return _createRouter({
 		// use appropriate history implementation for server/client
 		// import.meta.env.SSR is injected by Vite.

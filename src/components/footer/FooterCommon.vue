@@ -52,15 +52,15 @@
 			<div class="flex flex-col items-start justify-center pt-[20px] text-gray-600 dark:text-gray-400 lg:flex-row lg:items-center lg:pt-[24px]">
 				<div class="mb-[8px] lg:mb-[0px]">
 					<div class="text-[14px] md:text-[16px]">
-						<span>Copyright © </span><a href="/">Legend Stories </a><span>{{ date }}</span>
+						<span>Copyright © </span><router-link to="/">Legend Stories </router-link><span>{{ date }}</span>
 					</div>
 				</div>
 				<div class="md:mt-[8px] md:ml-[8px] flex flex-wrap text-[14px] md:text-[16px] lg:ml-auto">
-					<a class="md:mt-[8px] md:ml-[8px]" href="#">Terms of Service</a>
+					<router-link class="md:mt-[8px] md:ml-[8px]" to="#">Terms of Service</router-link>
 					<span class="md:mt-[8px] ml-[8px]">·</span>
-					<a class="md:mt-[8px] ml-[8px]" href="#">Privacy Policy</a>
+					<router-link class="md:mt-[8px] ml-[8px]" to="#">Privacy Policy</router-link>
 					<span class="md:mt-[8px] ml-[8px] mr-[8px] md:mr-0">·</span>
-					<a class="md:mt-[8px] md:ml-[8px]" href="#">Cookie Policy</a>
+					<router-link class="md:mt-[8px] md:ml-[8px]" to="#">Cookie Policy</router-link>
 				</div>
 			</div>
 		</div>

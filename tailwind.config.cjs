@@ -4,7 +4,7 @@ module.exports = {
   mode: 'jit',
   darkMode: 'class',
   enable: process.env.NODE_ENV === 'production',
-  content: ['./index.html', './src/**/*.{vue,js,jsx}'],
+  content: ['./index.html', './src/**/*.{vue,js,jsx}', './node_modules/flowbite/**/*.js'],
   theme: {
     extend: {
       screens: {
@@ -16,5 +16,5 @@ module.exports = {
       }
     }
   },
-  plugins: []
+  plugins: [require('flowbite/plugin')]
 }
