@@ -6,7 +6,7 @@
 					<span class="font-semibold tracking-[1.29px] hidden sm:inline">LEGENDSTORIES</span>
 				</router-link>
 				<div
-					:class="`flex absolute w-full md:static md:top-auto md:w-auto transition-[top] duration-500 left-0 dark:bg-[#333435] dark:md:bg-transparent z-[1] ${
+					:class="`flex absolute w-full z-[1] md:static md:top-auto md:w-auto transition-[top] duration-500 left-0 bg-white dark:bg-[#333435] dark:md:bg-transparent ${
 						visible ? 'top-[56px]' : 'top-[-100%]'
 					}`"
 				>
@@ -15,7 +15,7 @@
 						<router-link class="font-semibold block p-3 md:flex md:h-full items-center px-[12px]" to="/countries">Bookmarks</router-link>
 					</div>
 				</div>
-				<div class="relative z-10 dark:bg-[#131415] px-4 ml-auto flex items-center w-full justify-between md:w-auto md:justify-normal space-x-[8px]">
+				<div class="relative z-10 bg-white dark:bg-[#131415] px-4 ml-auto flex items-center w-full justify-between md:w-auto md:justify-normal space-x-[8px]">
 					<div class="relative">
 						<div class="w-full">
 							<div
