@@ -15,7 +15,7 @@
 						<router-link class="font-semibold block p-3 md:flex md:h-full items-center px-[12px]" to="/countries">Bookmarks</router-link>
 					</div>
 				</div>
-				<div class="relative z-10 dark:bg-[#131415] ml-auto flex items-center w-full justify-between md:w-auto md:justify-normal space-x-[8px]">
+				<div class="relative z-10 dark:bg-[#131415] px-4 ml-auto flex items-center w-full justify-between md:w-auto md:justify-normal space-x-[8px]">
 					<div class="relative">
 						<div class="w-full">
 							<div
@@ -29,56 +29,55 @@
 									></path>
 								</svg>
 								<input
-									class="transition-all ml-[5px] bg-gray-100 dark:placeholder:bg-[#202020] bottom-0 h-[34px] dark:bg-[#202020] focus:border-none focus:pr-[25px] outline-none"
-									aria-invalid="false"
+									class="transition-all border-none ml-[5px] bg-gray-100 dark:placeholder:bg-[#202020] bottom-0 h-[34px] dark:bg-[#202020] focus:border-0 focus:border-none focus:pr-[25px] outline-none focus:outline-none"
 									autocomplete="off"
 									placeholder="Search"
 									type="text"
-									aria-autocomplete="list"
-									aria-expanded="false"
 									autocapitalize="none"
 									spellcheck="false"
 									role="combobox"
-									aria-label="search"
 									value=""
 								/>
-								<fieldset aria-hidden="true"></fieldset>
+								<fieldset></fieldset>
 							</div>
 						</div>
 					</div>
-					<button
-						data-popover-target="popover-Login"
-						data-popover-trigger="click"
-						type="button"
-						class="md:p-[8px] hidden md:block bg-gray-100 md:hover:bg-gray-50 dark:md:hover:bg-black md:rounded-[50%] dark:md:bg-[#202020] overflow-hidden"
-						tabindex="0"
-					>
-						<svg
-							width="20"
-							height="20"
-							viewBox="0 0 20 20"
-							fill="currentColor"
-							xmlns="http://www.w3.org/2000/svg"
-							class="h-[24px] w-[24px] md:h-[28px] md:w-[28px]"
+					<div class="flex">
+						<button
+							id="dropdownBottomButton"
+							data-dropdown-toggle="dropdownBottom"
+							data-dropdown-placement="bottom"
+							type="button"
+							class="p-[8px] bg-gray-100 mr-2 md:hover:bg-gray-50 dark:md:hover:bg-black rounded-[50%] dark:bg-[#202020] overflow-hidden"
+							tabindex="0"
 						>
-							<path
-								d="M14.444 6.444a4.444 4.444 0 1 1-8.888 0 4.444 4.444 0 0 1 8.888 0ZM10 11.778c-3.304 0-6.161 2.026-7.527 4.97-.282.606.198 1.252.866 1.252h13.322c.668 0 1.148-.646.866-1.252-1.366-2.944-4.223-4.97-7.527-4.97Z"
-							></path>
-						</svg>
-					</button>
-					<LoginToolTip />
-					<button class="bg-transparent p-[8px] block md:hidden" tabindex="0" type="button" @click="toggleVisible">
-						<svg
-							width="20"
-							height="20"
-							viewBox="0 0 20 20"
-							fill="currentColor"
-							xmlns="http://www.w3.org/2000/svg"
-							class="h-[24px] w-[24px] md:h-[28px] md:w-[28px]"
-						>
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M18 5.5H2v-2h16v2Zm0 5.5H2V9h16v2Zm0 5.5H2v-2h16v2Z"></path>
-						</svg>
-					</button>
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-[24px] w-[24px] md:h-[28px] md:w-[28px]"
+							>
+								<path
+									d="M14.444 6.444a4.444 4.444 0 1 1-8.888 0 4.444 4.444 0 0 1 8.888 0ZM10 11.778c-3.304 0-6.161 2.026-7.527 4.97-.282.606.198 1.252.866 1.252h13.322c.668 0 1.148-.646.866-1.252-1.366-2.944-4.223-4.97-7.527-4.97Z"
+								></path>
+							</svg>
+						</button>
+						<LoginToolTip />
+						<button class="bg-transparent p-[8px] block md:hidden" tabindex="0" type="button" @click="toggleVisible">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-[24px] w-[24px] md:h-[28px] md:w-[28px]"
+							>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M18 5.5H2v-2h16v2Zm0 5.5H2V9h16v2Zm0 5.5H2v-2h16v2Z"></path>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
