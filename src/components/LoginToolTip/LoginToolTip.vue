@@ -1,7 +1,7 @@
 <template>
 	<div id="dropdownBottom" class="z-10 hidden bg-gray-50 dark:divide-[#404040] rounded-lg shadow dark:bg-[#303030] w-full md:w-[300px]">
 		<div class="flex justify-center py-4 px-1 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-[#404040] dark:bg-[#404040]">
-			<router-link to="/Account/Login" @click="changeMode(false)">
+			<router-link to="/Account/Login">
 				<button
 					type="button"
 					class="font-semibold text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 rounded-[20px] text-sm px-16 py-2.5 text-center mr-2 mb-2"
@@ -29,14 +29,13 @@ import { onMounted, ref } from 'vue'
 const mode = ref('Dark')
 
 function changeMode(e) {
+	console.log('😉e:', e)
 	if (document && localStorage && window) {
 		localStorage.theme = 'light'
 		document.documentElement.classList.remove('dark')
 		mode.value = 'Light'
 		if (e) {
 			localStorage.theme = 'dark'
-		}
-		if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
 			document.documentElement.classList.add('dark')
 			mode.value = 'Dark'
 		}
@@ -44,6 +43,11 @@ function changeMode(e) {
 }
 
 onMounted(() => {
-	changeMode(false)
+	if (document && localStorage && window) {
+		if (localStorage.theme === 'dark') {
+			document.documentElement.classList.add('dark')
+			mode.value = 'Dark'
+		}
+	}
 })
 </script>
