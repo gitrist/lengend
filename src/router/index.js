@@ -1,7 +1,8 @@
 import { createRouter as _createRouter, createMemoryHistory, createWebHistory } from 'vue-router'
 
 const routes = [
-	{ path: '/countries', component: () => import('../views/Countries/CountriesSummary.vue') },
+	{ path: '/Countries', component: () => import('../views/Countries/CountriesSummary.vue') },
+	{ path: '/Account/Login', component: () => import('../views/AccountLogin/AccountLogin.vue') },
 	{ path: '/', component: () => import('../views/StoriesSearch/StoriesSearch.vue') }
 ]
 

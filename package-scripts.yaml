@@ -7,6 +7,6 @@ scripts:
     client: vite build --outDir dist/client --ssrManifest
     server: vite build --outDir dist/server --ssr server/entry-server.js
   # commit
-  commit: git-cz
+  commit: git add . && git-cz
   # eslint
   lint: eslint src/**/*.{js,vue} --fix

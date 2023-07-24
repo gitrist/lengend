@@ -1,21 +1,25 @@
 <template>
-	<header class="relative dark:text-white shadow-md" id="header">
+	<header class="relative dark:text-white shadow-sm" id="header">
 		<div class="h-[56px] dark:bg-[#131415] text-[14px] sm:h-[64px] md:h-[72px]">
 			<div class="mx-auto flex h-full max-w-[1280px] flex-1 py-0 md:px-[24px]">
-				<router-link class="inline-flex items-center space-x-[6px]" to="/">
+				<a class="inline-flex items-center space-x-[6px]" href="http://localhost:5000">
 					<span class="font-semibold tracking-[1.29px] hidden sm:inline">LEGENDSTORIES</span>
-				</router-link>
+				</a>
 				<div
+					v-show="route.path !== '/Account/Login'"
 					:class="`flex absolute w-full z-[1] md:static md:top-auto md:w-auto transition-[top] duration-500 left-0 bg-white dark:bg-[#333435] dark:md:bg-transparent ${
 						visible ? 'top-[56px]' : 'top-[-100%]'
 					}`"
 				>
 					<div class="mr-[8px] block md:flex flex-1 items-center pt-[8px] sm:pt-0 md:ml-[13px]">
-						<router-link class="font-semibold block p-3 md:flex md:h-full items-center px-[12px]" to="/countries">Series</router-link>
-						<router-link class="font-semibold block p-3 md:flex md:h-full items-center px-[12px]" to="/countries">Bookmarks</router-link>
+						<router-link class="font-semibold block p-3 md:flex md:h-full items-center px-[12px]" to="/Countries">Series</router-link>
+						<router-link class="font-semibold block p-3 md:flex md:h-full items-center px-[12px]" to="/Countries">Bookmarks</router-link>
 					</div>
 				</div>
-				<div class="relative z-10 bg-white dark:bg-[#131415] px-4 ml-auto flex items-center w-full justify-between md:w-auto md:justify-normal space-x-[8px]">
+				<div
+					v-show="route.path !== '/Account/Login'"
+					class="relative z-10 bg-white dark:bg-[#131415] px-4 ml-auto flex items-center w-full justify-between md:w-auto md:justify-normal space-x-[8px]"
+				>
 					<div class="relative">
 						<div class="w-full">
 							<div
@@ -86,10 +90,12 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { initFlowbite } from 'flowbite'
+import { useRoute } from 'vue-router'
 
 import LoginToolTip from '../LoginToolTip/LoginToolTip.vue'
 
 const visible = ref(false)
+const route = useRoute()
 
 const toggleVisible = () => {
 	visible.value = !visible.value

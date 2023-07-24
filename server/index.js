@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 import Koa from 'koa'
 import koaConnect from 'koa-connect'
 
-export async function createServer (root = process.cwd(), isProd = process.env.NODE_ENV === 'production', hmrPort = 5100) {
+export async function createServer(root = process.cwd(), isProd = process.env.NODE_ENV === 'production', hmrPort = 5100) {
 	const __dirname = path.dirname(fileURLToPath(import.meta.url))
 	const resolve = (p) => path.resolve(__dirname, p)
 	const indexProd = isProd ? fs.readFileSync(resolve('dist/client/index.html'), 'utf-8') : ''
@@ -49,6 +49,7 @@ export async function createServer (root = process.cwd(), isProd = process.env.N
 	app.use(async (ctx) => {
 		try {
 			const url = ctx.originalUrl
+			console.log('😈url:', url)
 
 			let template, render
 			if (!isProd) {

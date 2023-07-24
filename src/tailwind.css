@@ -2,22 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* width */
-::-webkit-scrollbar {
-  width: 15px;
-}
 
-/* Track */
-::-webkit-scrollbar-track-piece{
-  background: #333435;
-}
+  /* width */
+  .dark ::-webkit-scrollbar {
+    width: 15px;
+  }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #636465;
-}
+  /* Track */
+  .dark ::-webkit-scrollbar-track-piece{
+    background: #333435;
+  }
 
-::-webkit-scrollbar-button {
-  background: #333435;
-  color: #fff;
-}
+  /* Handle */
+  .dark ::-webkit-scrollbar-thumb {
+    background: #636465;
+  }
+
+  .dark ::-webkit-scrollbar-button {
+    background: #333435;
+    color: #fff;
+  }
