@@ -49,7 +49,6 @@ export async function createServer(root = process.cwd(), isProd = process.env.NO
 	app.use(async (ctx) => {
 		try {
 			const url = ctx.originalUrl
-			console.log('😈url:', url)
 
 			let template, render
 			if (!isProd) {

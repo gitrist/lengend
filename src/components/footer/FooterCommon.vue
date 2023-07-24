@@ -71,5 +71,4 @@ import { useRoute } from 'vue-router'
 
 const date = new Date().getFullYear()
 const route = useRoute()
-console.log('😂route123:', route)
 </script>
