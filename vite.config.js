@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import vuePlugin from '@vitejs/plugin-vue'
-import path from 'path'
+import {resolve} from 'path'
 
 const virtualFile = '@virtual-file'
 const virtualId = '\0' + virtualFile
@@ -98,12 +98,10 @@ export default defineConfig(({ command, ssrBuild }) => ({
 		minify: false
 	},
 	resolve: {
+		extensions: ['.vue', '.js'],
 		alias: [
-			// 配置路径别名
-			{
-				find: '@',
-				replacement: path.resolve(__dirname, 'src')
-			}
+			{find: '@',replacement: resolve(__dirname, 'src')}
 		]
-	}
+	},
+	
 }))

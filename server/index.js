@@ -19,9 +19,7 @@ export async function createServer(root = process.cwd(), isProd = process.env.NO
 		// 以中间件模式创建 Vite 应用，并将 appType 配置为 'custom'
 		// 这将禁用 Vite 自身的 HTML 服务逻辑
 		// 并让上级服务器接管控制
-		viteServer = await (
-			await import('vite')
-		).createServer({
+		viteServer = await (await import('vite')).createServer({
 			root,
 			logLevel: 'info',
 			server: {
@@ -78,6 +76,6 @@ export async function createServer(root = process.cwd(), isProd = process.env.NO
 
 createServer().then(({ app }) =>
 	app.listen(5100, () => {
-		console.log('App is ready on: http://localhost:5001')
+		console.log('App is ready on: http://localhost:5100')
 	})
 )

@@ -11,6 +11,6 @@
 </template>
 
 <script setup>
-import FooterCommon from './components/Footer/FooterCommon.vue'
-import HeaderCommon from './components/Header/HeaderCommon.vue'
+import FooterCommon from '@/components/footer/index'
+import HeaderCommon from '@/components/header/index'
 </script>

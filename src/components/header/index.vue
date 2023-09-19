@@ -2,7 +2,7 @@
 	<header class="relative dark:text-white shadow-sm" id="header">
 		<div class="h-[56px] dark:bg-[#131415] text-[14px] sm:h-[64px] md:h-[72px]">
 			<div class="mx-auto flex h-full max-w-[1280px] flex-1 py-0 md:px-[24px]">
-				<a class="inline-flex items-center space-x-[6px]" href="http://localhost:5000">
+				<a class="inline-flex items-center space-x-[6px]" href="/">
 					<span class="font-semibold tracking-[1.29px] hidden sm:inline">LEGENDSTORIES</span>
 				</a>
 				<div
