@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 import Koa from 'koa'
 import koaConnect from 'koa-connect'
 
-export async function createServer(root = process.cwd(), isProd = process.env.NODE_ENV === 'production', hmrPort = 5100) {
+export async function createServer(root = process.cwd(), isProd = process.env.NODE_ENV === 'production', hmrPort = 5101) {
 	const __dirname = path.dirname(fileURLToPath(import.meta.url))
 	const resolve = (p) => path.resolve(__dirname, p)
 	const indexProd = isProd ? fs.readFileSync(resolve('dist/client/index.html'), 'utf-8') : ''
@@ -77,7 +77,7 @@ export async function createServer(root = process.cwd(), isProd = process.env.NO
 }
 
 createServer().then(({ app }) =>
-	app.listen(5000, () => {
-		console.log('App is ready on: http://localhost:5000')
+	app.listen(5100, () => {
+		console.log('App is ready on: http://localhost:5001')
 	})
 )
