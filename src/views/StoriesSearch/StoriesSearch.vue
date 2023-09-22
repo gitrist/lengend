@@ -1,7 +1,7 @@
 <template>
-	<div class="dark:text-white pt-[20px] flex w-full">
-		<div class="flex-[2] h-[300px]">
-			<Carousel />
+	<div class="dark:text-white pt-[20px] flex w-full justify-around">
+		<div class="flex-[2] h-[300px] mr-4">
+			<Carousel/>
 		</div>
 		<div class="flex-[1]">
 			<div class="relative overflow-x-auto">
@@ -42,12 +42,14 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex justify-around">
+	<div class="flex justify-around mt-[20px]">
 		<Card class="m-[10px] p-[10px]" v-for="(item, index) in Array.of(1,2,3,4)" :key="item" />
 	</div>
+	<CountriesSummary />
 </template>
 
 <script setup>
 import Carousel from '../../components/Carousel/Carousel.vue';
 import Card from '../../components/Card/Card';
+import CountriesSummary from '../countries/CountriesSummary'
 </script>
