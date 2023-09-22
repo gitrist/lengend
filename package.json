@@ -23,6 +23,7 @@
   "dependencies": {
     "compression": "^1.7.4",
     "flowbite": "^1.7.0",
+    "flowbite-vue": "0.0.17-next.10",
     "nps": "^5.10.0",
     "pinia": "2.1.4",
     "serve-static": "^1.15.0",
