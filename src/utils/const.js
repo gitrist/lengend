@@ -1,0 +1,1 @@
+export const LENGEND_MAIN_THEME = 'LENGEND_MAIN_THEME';
